@@ -6,6 +6,9 @@
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
+.menu-btn:hover .btn-line {
+  background: #03fcf0;
+}
 .menu-btn .btn-line {
   width: 28px;
   height: 3px;
@@ -80,10 +83,10 @@
   color: #03fcf0;
 }
 .menu .nav-item.current .nav-link {
-  color: #03fcf0;
+  text-decoration: line-through;
 }
 .menu .about-link.current {
-  color: #03fcf0;
+  text-decoration: line-through;
 }
 .menu .nav-link {
   display: inline-block;
@@ -167,6 +170,7 @@ h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
   background: rgb(73.1, 73.1, 73.1);
+  width: fit-content;
 }
 
 a {
@@ -203,6 +207,15 @@ main#home {
 }
 main#home h1 {
   margin-top: 20vh;
+}
+
+.portrait-img {
+  position: fixed;
+  bottom: 0px;
+  right: 400px;
+  width: 700px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-info {

@@ -29,6 +29,7 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: lighten($primary-color, 2);
+    width: fit-content;
   }
 }
 
@@ -70,6 +71,15 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+.portrait-img {
+  position: fixed;
+  bottom: 0px;
+  right: 400px;
+  width: 700px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-info {
