@@ -200,7 +200,7 @@ main#home h1 {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "email phone address";
   grid-template-columns: repeat(3, 1fr);
 }
 .about-info .bio-image {
@@ -229,6 +229,60 @@ main#home h1 {
   padding: 0.5rem;
   border-bottom: #03fcf0 5px solid;
 }
+.about-info .email-box {
+  grid-area: email;
+}
+.about-info .email-box div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.about-info .email-box div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #03fcf0;
+  color: #000;
+}
+.about-info .email-box div:hover span {
+  color: #000;
+}
+.about-info .phone-box {
+  grid-area: phone;
+}
+.about-info .phone-box div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.about-info .phone-box div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #03fcf0;
+  color: #000;
+}
+.about-info .phone-box div:hover span {
+  color: #000;
+}
+.about-info .address-box {
+  grid-area: address;
+}
+.about-info .address-box div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.about-info .address-box div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #03fcf0;
+  color: #000;
+}
+.about-info .address-box div:hover span {
+  color: #000;
+}
 
 .projects {
   display: grid;
@@ -243,29 +297,6 @@ main#home h1 {
   opacity: 0.5;
   border-color: #03fcf0;
   transition: all 0.5s ease-out;
-}
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-}
-.boxes div {
-  font-size: 2rem;
-  border: 3px #fff solid;
-  padding: 1.5rem 2.5rem;
-  margin-bottom: 3rem;
-  transition: all 0.5s ease-out;
-}
-.boxes div:hover {
-  padding: 0.5rem 1.5rem;
-  background: #03fcf0;
-  color: #000;
-}
-.boxes div:hover span {
-  color: #000;
 }
 
 .btn, .btn-light, .btn-dark {
@@ -295,6 +326,15 @@ main#home h1 {
   background: rgb(42.5, 42.5, 42.5);
   color: #fff;
   height: 60px;
+}
+#main-footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+#main-footer .icons a:hover {
+  color: #03fcf0;
+  transition: all 0.5s ease-out;
 }
 
 @media screen and (min-width: 1171px) {

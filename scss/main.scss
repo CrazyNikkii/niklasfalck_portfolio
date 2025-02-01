@@ -77,7 +77,8 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "job1 job2 job3";
+    "job1 job2 job3"
+    "email phone address";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -111,6 +112,63 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
+  .email-box {
+    grid-area: email;
+    div {
+      font-size: 2rem;
+      border: 3px #fff solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      @include easeOut;
+
+      &:hover {
+        padding: 0.5rem 1.5rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        span {
+          color: set-text-color($secondary-color);
+        }
+      }
+    }
+  }
+  .phone-box {
+    grid-area: phone;
+    div {
+      font-size: 2rem;
+      border: 3px #fff solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      @include easeOut;
+
+      &:hover {
+        padding: 0.5rem 1.5rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        span {
+          color: set-text-color($secondary-color);
+        }
+      }
+    }
+  }
+  .address-box {
+    grid-area: address;
+    div {
+      font-size: 2rem;
+      border: 3px #fff solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      @include easeOut;
+
+      &:hover {
+        padding: 0.5rem 1.5rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        span {
+          color: set-text-color($secondary-color);
+        }
+      }
+    }
+  }
 }
 
 .projects {
@@ -126,31 +184,6 @@ main {
       opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
-    }
-  }
-}
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-
-  div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    @include easeOut;
-
-    &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
-      span {
-        color: set-text-color($secondary-color);
-      }
     }
   }
 }
@@ -183,6 +216,18 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    a {
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
 }
 
 @import "mobile";
