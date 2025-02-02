@@ -1,14 +1,17 @@
 {
-  "name": "portfolio-website",
+  "name": "niklasfalck_portfolio",
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.js",
+  "homepage": "https://CrazyNikkii.github.io/niklasfalck_portfolio",
   "scripts": {
-    "sass": "sass --watch scss:dist/css"
+    "sass": "sass --watch scss:dist/css",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Niklas Falck",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.83.4"
   }
 }

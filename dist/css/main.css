@@ -344,6 +344,7 @@ main#home h1 {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
 }
 .projects .item {
   position: relative;
@@ -354,10 +355,14 @@ main#home h1 {
 .projects .item .flip-card {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
   background-color: transparent;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .projects .item .flip-card:hover {
   cursor: pointer;
@@ -372,6 +377,9 @@ main#home h1 {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projects .item .flip-card .flip-card-front,
 .projects .item .flip-card .flip-card-back {
@@ -380,19 +388,26 @@ main#home h1 {
   height: 100%;
   backface-visibility: hidden;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  overflow: hidden;
 }
 .projects .item .flip-card .flip-card-front {
   background-color: #bbb;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projects .item .flip-card .flip-card-front:hover {
   border-color: #03fcf0;
 }
 .projects .item .flip-card .flip-card-front img {
   width: 100%;
-  height: auto;
-  display: block;
-  border: 3px solid #fff;
+  height: 100%;
+  object-fit: cover;
   box-sizing: border-box;
 }
 .projects .item .flip-card .flip-card-front img:hover {
@@ -407,22 +422,26 @@ main#home h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100%;
-  padding: 28%;
-  border: 3px solid #fff;
+  padding: 0.5rem;
+  max-height: 100%;
 }
-.projects .item .flip-card .flip-card-back:hover {
-  border-color: rgb(53.4, 252.6, 243);
-}
-.projects .item .flip-card h3 {
-  font-size: 1.8rem;
+.projects .item .flip-card .flip-card-back h3 {
+  font-size: calc(0.8rem + 0.5vw);
   margin: 0.5rem 0;
+  padding: 0.2rem;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
-.projects .item .flip-card p {
-  font-size: 1rem;
+.projects .item .flip-card .flip-card-back p {
+  font-size: calc(0.6rem + 0.4vw);
   margin-bottom: 1.5rem;
+  padding: 0.2rem;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
-.projects .item .flip-card .btn-dark {
+.projects .item .flip-card .flip-card-back .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
@@ -430,20 +449,70 @@ main#home h1 {
   background: black;
   color: #fff;
 }
-.projects .item .flip-card .btn-dark:hover {
+.projects .item .flip-card .flip-card-back .btn-dark:hover {
   background: #03fcf0;
   color: #000;
 }
-.projects .item .flip-card .btn-dark i {
+.projects .item .flip-card .flip-card-back .btn-dark i {
   margin-right: 0.5rem;
 }
-.projects img {
-  width: 100%;
-  transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
+.projects .item .flip-card .flip-card-back:hover {
+  border-color: rgb(53.4, 252.6, 243);
 }
-.projects img:hover {
-  opacity: 0.5;
-  border-color: #03fcf0;
+@media screen and (max-width: 500px) {
+  .projects .item .flip-card .flip-card-back {
+    padding: 0.25rem;
+  }
+  .projects .item .flip-card .flip-card-back h3 {
+    font-size: calc(0.8rem + 1vw);
+  }
+  .projects .item .flip-card .flip-card-back p {
+    font-size: calc(0.6rem + 0.8vw);
+  }
+  .projects .item .flip-card .flip-card-back .btn-dark {
+    padding: 0.4rem 0.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects .item .flip-card .flip-card-back {
+    padding: 0.2;
+  }
+  .projects .item .flip-card .flip-card-back h3 {
+    font-size: calc(0.5rem + 1vw);
+    margin-bottom: 0.1rem;
+  }
+  .projects .item .flip-card .flip-card-back p {
+    font-size: calc(0.5rem + 0.6vw);
+    margin-bottom: 0.1rem;
+  }
+  .projects .item .flip-card .flip-card-back .btn-dark {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects .item .flip-card .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .item .flip-card .flip-card-back {
+    padding: 0.2;
+  }
+  .projects .item .flip-card .flip-card-back h3 {
+    font-size: calc(0.5rem + 1vw);
+    margin-bottom: 0.1rem;
+  }
+  .projects .item .flip-card .flip-card-back p {
+    font-size: calc(0.4rem + 0.6vw);
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+  .projects .item .flip-card .flip-card-back .btn-dark {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media screen and (min-width: 1171px) {
+  .projects .item .flip-card .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .btn, .btn-dark {

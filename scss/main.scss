@@ -220,7 +220,8 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); // 3 columns on large screens
+  justify-items: start;
 
   .item {
     position: relative;
@@ -231,10 +232,14 @@ main {
     .flip-card {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: auto; // Allow the height to adjust automatically
+      aspect-ratio: 16 / 9; // Maintain the 16:9 aspect ratio
       background-color: transparent;
       transition: transform 0.8s;
       transform-style: preserve-3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
         cursor: pointer;
@@ -251,6 +256,9 @@ main {
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .flip-card-front,
@@ -260,11 +268,19 @@ main {
         height: 100%;
         backface-visibility: hidden;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #fff;
+        overflow: hidden; // Keep text inside the box
       }
 
       .flip-card-front {
         background-color: #bbb;
         color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
           border-color: $secondary-color;
@@ -272,9 +288,8 @@ main {
 
         img {
           width: 100%;
-          height: auto;
-          display: block;
-          border: 3px solid #fff;
+          height: 100%;
+          object-fit: cover;
           box-sizing: border-box;
 
           &:hover {
@@ -292,51 +307,125 @@ main {
         justify-content: center;
         align-items: center;
         text-align: center;
-        min-height: 100%;
-        padding: 28%;
-        border: 3px solid #fff;
+        padding: 0.5rem;
+        max-height: 100%;
+
+        h3 {
+          font-size: calc(0.8rem + 0.5vw); // Smaller dynamic font size
+          margin: 0.5rem 0;
+          padding: 0.2rem;
+          word-wrap: break-word;
+          white-space: normal;
+          max-width: 100%;
+        }
+
+        p {
+          font-size: calc(
+            0.6rem + 0.4vw
+          ); // Even smaller dynamic font size for paragraph
+          margin-bottom: 1.5rem;
+          padding: 0.2rem;
+          word-wrap: break-word;
+          white-space: normal;
+          max-width: 100%;
+        }
+
+        .btn-dark {
+          display: block;
+          padding: 0.5rem 1rem;
+          border: 0;
+          margin: 0.3rem auto;
+          background: darken($primary-color, 50);
+          color: #fff;
+
+          &:hover {
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+          }
+
+          i {
+            margin-right: 0.5rem;
+          }
+        }
 
         &:hover {
           border-color: lighten($secondary-color, 10%);
         }
       }
 
-      h3 {
-        font-size: 1.8rem;
-        margin: 0.5rem 0;
-      }
-
-      p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .btn-dark {
-        display: block;
-        padding: 0.5rem 1rem;
-        border: 0;
-        margin: 0.3rem auto;
-        background: darken($primary-color, 50);
-        color: #fff;
-
-        &:hover {
-          background: $secondary-color;
-          color: set-text-color($secondary-color);
+      // Adjustments for smaller screens
+      @include mediaSm {
+        .flip-card-back {
+          padding: 0.25rem;
         }
 
-        i {
-          margin-right: 0.5rem;
+        .flip-card-back h3 {
+          font-size: calc(
+            0.8rem + 1vw
+          ); // Larger font scaling for smaller screens
+        }
+
+        .flip-card-back p {
+          font-size: calc(
+            0.6rem + 0.8vw
+          ); // Adjusted font for better fit on small screens
+        }
+
+        .flip-card-back .btn-dark {
+          padding: 0.4rem 0.8rem;
         }
       }
-    }
-  }
-  img {
-    width: 100%;
-    transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
+      // Medium screen adjustments
+      @include mediaMd {
+        .flip-card-back {
+          padding: 0.2;
+        }
+
+        .flip-card-back h3 {
+          font-size: calc(0.5rem + 1vw); // Adjust for medium screens
+          margin-bottom: 0.1rem;
+        }
+
+        .flip-card-back p {
+          font-size: calc(0.5rem + 0.6vw);
+          margin-bottom: 0.1rem; // Adjust text size for medium screens
+        }
+
+        .flip-card-back .btn-dark {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+
+      @include mediaLg {
+        .projects {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .flip-card-back {
+          padding: 0.2;
+        }
+
+        .flip-card-back h3 {
+          font-size: calc(0.5rem + 1vw); // Adjust for medium screens
+          margin-bottom: 0.1rem;
+        }
+
+        .flip-card-back p {
+          font-size: calc(0.4rem + 0.6vw);
+          margin-top: 0.1rem;
+          margin-bottom: 0.1rem; // Adjust text size for medium screens
+        }
+
+        .flip-card-back .btn-dark {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+
+      @include mediaXl {
+        .projects {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
     }
   }
 }
