@@ -236,6 +236,7 @@ main {
       position: relative;
       width: 100%;
       height: auto;
+      min-height: 240px;
       aspect-ratio: 16 / 9;
       background-color: transparent;
       transition: transform 0.8s;
@@ -394,21 +395,18 @@ main {
 
       @include mediaLg {
         .projects {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         }
         .flip-card-back {
-          padding: 0.2;
+          padding: 0.5rem;
         }
 
         .flip-card-back h3 {
-          font-size: calc(0.5rem + 1vw);
-          margin-bottom: 0.1rem;
+          font-size: calc(1rem + 1vw);
         }
 
         .flip-card-back p {
-          font-size: calc(0.4rem + 0.6vw);
-          margin-top: 0.1rem;
-          margin-bottom: 0.1rem;
+          font-size: calc(0.8rem + 0.6vw);
         }
 
         .flip-card-back .btn-dark {
