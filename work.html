@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>My Work</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <a href="about.html" class="nav-link about-link"> About Me </a>
+          <a href="index.html" class="home-btn">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+
+        <ul class="menu-nav">
+          <li class="nav-item current">
+            <a href="work.html" class="nav-link"> &nbsp;My Work&nbsp; </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="work">
+      <h1 class="lg-heading">My <span class="text-secondary">Work</span></h1>
+      <h2 class="sm-heading">Some of my projects...</h2>
+      <div class="projects">
+        <div class="item">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/projects/OSLeaders.jpg" alt="Project" />
+              </div>
+              <div class="flip-card-back">
+                <h3>OSLeaders Discord Bot</h3>
+                <p>
+                  OSLeaders is a Discord bot designed to enhance group
+                  interactions among friends by integrating Old School RuneScape
+                  (OSRS) stats and features into your Discord server. The bot
+                  allows users to manage their OSRS accounts, view stats, and
+                  access skill-related data directly from the OSRS API.
+                </p>
+                <a
+                  href="https://github.com/CrazyNikkii/DiscordBot"
+                  class="btn-dark"
+                >
+                  <i class="fab fa-github"></i> Github
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/projects/portfolio_site.jpg" alt="Project" />
+              </div>
+              <div class="flip-card-back">
+                <h3>My Portfolio Website</h3>
+                <p>
+                  This is my personal portfolio website showcasing all my
+                  projects and skills. This portfolio website is built using
+                  HTML and SCSS, combining clean structure with modern styling.
+                  Interactive menus enhance the user experience, making
+                  navigation smooth and engaging.
+                </p>
+                <a
+                  href="https://github.com/CrazyNikkii/Portfolio-website"
+                  class="btn-dark"
+                >
+                  <i class="fab fa-github"></i> Github
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer">
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/niklasfalck-i">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/falck.niklas/">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://github.com/CrazyNikkii/">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
