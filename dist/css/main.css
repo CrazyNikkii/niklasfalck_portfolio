@@ -355,15 +355,24 @@ main#home h1 {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  box-sizing: border-box;
 }
 .projects .item .flip-card .flip-card-front {
   background-color: #bbb;
   color: black;
 }
+.projects .item .flip-card .flip-card-front:hover {
+  border-color: #03fcf0;
+}
 .projects .item .flip-card .flip-card-front img {
   width: 100%;
   height: auto;
   display: block;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+}
+.projects .item .flip-card .flip-card-front img:hover {
+  border-color: #03fcf0;
 }
 .projects .item .flip-card .flip-card-back {
   background-color: #444;
@@ -375,17 +384,21 @@ main#home h1 {
   align-items: center;
   text-align: center;
   min-height: 100%;
-  padding-top: 20%;
+  padding: 28%;
+  border: 3px solid #fff;
 }
-.projects .item .flip-card .flip-card-back h3 {
+.projects .item .flip-card .flip-card-back:hover {
+  border-color: rgb(53.4, 252.6, 243);
+}
+.projects .item .flip-card h3 {
   font-size: 1.8rem;
   margin: 0.5rem 0;
 }
-.projects .item .flip-card .flip-card-back p {
+.projects .item .flip-card p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
-.projects .item .flip-card .flip-card-back .btn-dark {
+.projects .item .flip-card .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
@@ -393,19 +406,19 @@ main#home h1 {
   background: black;
   color: #fff;
 }
-.projects .item .flip-card .flip-card-back .btn-dark:hover {
+.projects .item .flip-card .btn-dark:hover {
   background: #03fcf0;
   color: #000;
 }
-.projects .item .flip-card .flip-card-back .btn-dark i {
+.projects .item .flip-card .btn-dark i {
   margin-right: 0.5rem;
 }
-.projects img {
+
+img {
   width: 100%;
-  border: 3px #fff solid;
   transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
 }
-.projects img:hover {
+img:hover {
   opacity: 0.5;
   border-color: #03fcf0;
 }
