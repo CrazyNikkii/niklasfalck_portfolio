@@ -561,7 +561,9 @@ main#home h1 {
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main {
-    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    padding: 0.01rem;
   }
   .projects {
     grid-template-columns: repeat(2, 1fr);
@@ -603,6 +605,7 @@ main#home h1 {
     height: 150px;
   }
   .about-info {
+    padding: 0.01rem;
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "email" "phone" "address";
     grid-template-columns: 1fr;
   }
@@ -614,6 +617,9 @@ main#home h1 {
   main {
     align-items: center;
     text-align: center;
+    padding: 0.01rem;
+  }
+  .about-info {
     padding: 0.01rem;
   }
   main#home h1 {
