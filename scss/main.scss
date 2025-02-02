@@ -51,6 +51,7 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
+  overflow: hidden; // Prevent scrolling on the page
 
   .icons {
     margin-top: 1rem;
@@ -75,10 +76,33 @@ main {
 
 .portrait-img {
   position: fixed;
-  bottom: 0px;
-  right: 400px;
-  width: 700px;
+  bottom: 0;
+  right: 100px;
+  width: 800px;
   height: auto;
+
+  // On large screens, keep it at the bottom-right corner
+  @include mediaLg {
+    width: 50vw; // Responsive width on large screens
+    right: 0; // Ensure it's aligned to the right
+    bottom: 0; // Keep it at the bottom
+  }
+
+  // On medium screens, move it under the title and adjust size
+  @include mediaMd {
+    position: static; // Move the image under the title
+    width: 40vw; // Increase the width for medium screens
+    margin-top: 1rem; // Ensure it has some space under the title
+    margin-bottom: 0; // Avoid any additional bottom margin
+  }
+
+  // On small screens, move it under the title
+  @include mediaSm {
+    position: static; // Move the image under the title
+    width: 50vw; // Adjust the size on small screens
+    margin-top: 1rem; // Ensure it has some space under the title
+    margin-bottom: 0; // Avoid any additional bottom margin
+  }
 }
 
 .about-info {

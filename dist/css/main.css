@@ -191,6 +191,7 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
+  overflow: hidden;
 }
 main .icons {
   margin-top: 1rem;
@@ -211,10 +212,33 @@ main#home h1 {
 
 .portrait-img {
   position: fixed;
-  bottom: 0px;
-  right: 400px;
-  width: 700px;
+  bottom: 0;
+  right: 100px;
+  width: 800px;
   height: auto;
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .portrait-img {
+    width: 50vw;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portrait-img {
+    position: static;
+    width: 40vw;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .portrait-img {
+    position: static;
+    width: 50vw;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 }
 
 .about-info {
@@ -504,7 +528,7 @@ main#home h1 {
     grid-template-columns: 1fr;
   }
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 2fr);
   }
 }
 @media screen and (max-width: 500px) {
