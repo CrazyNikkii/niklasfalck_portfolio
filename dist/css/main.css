@@ -321,23 +321,102 @@ main#home h1 {
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 }
+.projects .item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+.projects .item .flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.projects .item .flip-card:hover {
+  cursor: pointer;
+}
+.projects .item .flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.projects .item .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.projects .item .flip-card .flip-card-front,
+.projects .item .flip-card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.projects .item .flip-card .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.projects .item .flip-card .flip-card-front img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.projects .item .flip-card .flip-card-back {
+  background-color: #444;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+  padding-top: 20%;
+}
+.projects .item .flip-card .flip-card-back h3 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+.projects .item .flip-card .flip-card-back p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.projects .item .flip-card .flip-card-back .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin: 0.3rem auto;
+  background: black;
+  color: #fff;
+}
+.projects .item .flip-card .flip-card-back .btn-dark:hover {
+  background: #03fcf0;
+  color: #000;
+}
+.projects .item .flip-card .flip-card-back .btn-dark i {
+  margin-right: 0.5rem;
+}
 .projects img {
   width: 100%;
   border: 3px #fff solid;
+  transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
 }
 .projects img:hover {
   opacity: 0.5;
   border-color: #03fcf0;
-  transition: all 0.5s ease-out;
 }
 
-.btn, .btn-light, .btn-dark {
+.btn, .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
 }
-.btn:hover, .btn-light:hover, .btn-dark:hover {
+.btn:hover, .btn-dark:hover {
   background: #03fcf0;
   color: #000;
 }
@@ -345,11 +424,6 @@ main#home h1 {
 .btn-dark {
   background: black;
   color: #fff;
-}
-
-.btn-light {
-  background: rgb(195.5, 195.5, 195.5);
-  color: #333;
 }
 
 #main-footer {
