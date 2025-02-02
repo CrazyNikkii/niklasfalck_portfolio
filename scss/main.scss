@@ -50,8 +50,8 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px);
-  overflow: hidden; // Prevent scrolling on the page
+  min-height: calc(100dvh - 60px);
+  overflow: hidden;
 
   .icons {
     margin-top: 1rem;
@@ -81,27 +81,24 @@ main {
   width: 800px;
   height: auto;
 
-  // On large screens, keep it at the bottom-right corner
   @include mediaLg {
-    width: 50vw; // Responsive width on large screens
-    right: 0; // Ensure it's aligned to the right
-    bottom: 0; // Keep it at the bottom
+    width: 50vw;
+    right: 0;
+    bottom: 0;
   }
 
-  // On medium screens, move it under the title and adjust size
   @include mediaMd {
-    position: static; // Move the image under the title
-    width: 40vw; // Increase the width for medium screens
-    margin-top: 1rem; // Ensure it has some space under the title
-    margin-bottom: 0; // Avoid any additional bottom margin
+    position: static;
+    width: 40vw;
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
 
-  // On small screens, move it under the title
   @include mediaSm {
-    position: static; // Move the image under the title
-    width: 50vw; // Adjust the size on small screens
-    margin-top: 1rem; // Ensure it has some space under the title
-    margin-bottom: 0; // Avoid any additional bottom margin
+    position: static;
+    width: 50vw;
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
 }
 
@@ -220,7 +217,7 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); // 3 columns on large screens
+  grid-template-columns: repeat(3, 1fr);
   justify-items: start;
 
   .item {
@@ -232,8 +229,8 @@ main {
     .flip-card {
       position: relative;
       width: 100%;
-      height: auto; // Allow the height to adjust automatically
-      aspect-ratio: 16 / 9; // Maintain the 16:9 aspect ratio
+      height: auto;
+      aspect-ratio: 16 / 9;
       background-color: transparent;
       transition: transform 0.8s;
       transform-style: preserve-3d;
@@ -272,7 +269,7 @@ main {
         justify-content: center;
         align-items: center;
         border: 3px solid #fff;
-        overflow: hidden; // Keep text inside the box
+        overflow: hidden;
       }
 
       .flip-card-front {
@@ -311,7 +308,7 @@ main {
         max-height: 100%;
 
         h3 {
-          font-size: calc(0.8rem + 0.5vw); // Smaller dynamic font size
+          font-size: calc(0.8rem + 0.5vw);
           margin: 0.5rem 0;
           padding: 0.2rem;
           word-wrap: break-word;
@@ -320,9 +317,7 @@ main {
         }
 
         p {
-          font-size: calc(
-            0.6rem + 0.4vw
-          ); // Even smaller dynamic font size for paragraph
+          font-size: calc(0.6rem + 0.4vw);
           margin-bottom: 1.5rem;
           padding: 0.2rem;
           word-wrap: break-word;
@@ -353,22 +348,17 @@ main {
         }
       }
 
-      // Adjustments for smaller screens
       @include mediaSm {
         .flip-card-back {
           padding: 0.25rem;
         }
 
         .flip-card-back h3 {
-          font-size: calc(
-            0.8rem + 1vw
-          ); // Larger font scaling for smaller screens
+          font-size: calc(0.8rem + 1vw);
         }
 
         .flip-card-back p {
-          font-size: calc(
-            0.6rem + 0.8vw
-          ); // Adjusted font for better fit on small screens
+          font-size: calc(0.6rem + 0.8vw);
         }
 
         .flip-card-back .btn-dark {
@@ -376,20 +366,19 @@ main {
         }
       }
 
-      // Medium screen adjustments
       @include mediaMd {
         .flip-card-back {
           padding: 0.2;
         }
 
         .flip-card-back h3 {
-          font-size: calc(0.5rem + 1vw); // Adjust for medium screens
+          font-size: calc(0.5rem + 1vw);
           margin-bottom: 0.1rem;
         }
 
         .flip-card-back p {
           font-size: calc(0.5rem + 0.6vw);
-          margin-bottom: 0.1rem; // Adjust text size for medium screens
+          margin-bottom: 0.1rem;
         }
 
         .flip-card-back .btn-dark {
@@ -406,14 +395,14 @@ main {
         }
 
         .flip-card-back h3 {
-          font-size: calc(0.5rem + 1vw); // Adjust for medium screens
+          font-size: calc(0.5rem + 1vw);
           margin-bottom: 0.1rem;
         }
 
         .flip-card-back p {
           font-size: calc(0.4rem + 0.6vw);
           margin-top: 0.1rem;
-          margin-bottom: 0.1rem; // Adjust text size for medium screens
+          margin-bottom: 0.1rem;
         }
 
         .flip-card-back .btn-dark {
