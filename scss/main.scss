@@ -306,15 +306,14 @@ main {
       }
     }
   }
-}
+  img {
+    width: 100%;
+    transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
 
-img {
-  width: 100%;
-  transition: opacity 0.3s ease-out, border-color 0.3s ease-out;
-
-  &:hover {
-    opacity: 0.5;
-    border-color: $secondary-color;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+    }
   }
 }
 
