@@ -501,13 +501,16 @@ main#home h1 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   .projects .item .flip-card .flip-card-back {
-    padding: 0.5rem;
+    padding: 0.2;
   }
   .projects .item .flip-card .flip-card-back h3 {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.5rem + 1vw);
+    margin-bottom: 0.1rem;
   }
   .projects .item .flip-card .flip-card-back p {
-    font-size: calc(0.8rem + 0.6vw);
+    font-size: calc(0.4rem + 0.6vw);
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
   }
   .projects .item .flip-card .flip-card-back .btn-dark {
     padding: 0.5rem 0.5rem;
