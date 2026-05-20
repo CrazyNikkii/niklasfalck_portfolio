@@ -611,6 +611,13 @@ main#home h1 {
     line-height: 1;
     margin-bottom: 1rem;
   }
+  main:not(#home) {
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+    padding: 6rem 1rem 2rem 1rem;
+  }
   body#bg-img {
     min-height: 100dvh;
     overflow: hidden;
@@ -619,18 +626,27 @@ main#home h1 {
     min-height: 100dvh;
     height: 100dvh;
     overflow: hidden;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 12vh;
+    padding-bottom: 0;
   }
   main#home h1 {
     margin-top: 0;
+  }
+  main#home .icons {
+    margin-top: 1rem;
+    z-index: 2;
   }
   .portrait-img {
     position: fixed;
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
-    width: 42vw;
+    height: clamp(180px, 28dvh, 280px);
+    width: auto;
     margin: 0;
+    z-index: 1;
   }
   ul.menu-nav,
   div.menu-branding {
@@ -681,8 +697,46 @@ main#home h1 {
     overflow-wrap: break-word;
     word-break: normal;
   }
+  main#work {
+    overflow: visible;
+  }
   .projects {
-    grid-template-columns: repeat(1, 2fr);
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+  .projects .item {
+    width: 100%;
+  }
+  .projects .item .flip-card {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    min-height: unset;
+  }
+  .projects .item .flip-card .flip-card-inner,
+  .projects .item .flip-card .flip-card-front,
+  .projects .item .flip-card .flip-card-back {
+    width: 100%;
+    height: 100%;
+  }
+  .projects .item .flip-card .flip-card-back {
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  .projects .item .flip-card .flip-card-back h3 {
+    font-size: clamp(1.1rem, 3.4vw, 1.4rem);
+    margin-bottom: 0.5rem;
+  }
+  .projects .item .flip-card .flip-card-back p {
+    font-size: clamp(0.85rem, 2.7vw, 1rem);
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+  }
+  .projects .item .flip-card .flip-card-back .btn-dark {
+    padding: 0.5rem 0.9rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -690,6 +744,13 @@ main#home h1 {
     align-items: center;
     text-align: center;
     padding: 0.01rem;
+  }
+  main:not(#home) {
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+    padding: 5.5rem 1rem 2rem 1rem;
   }
   .about-info {
     padding: 0.01rem;
@@ -710,8 +771,9 @@ main#home h1 {
     overflow-wrap: break-word;
     word-break: normal;
   }
-  main#home h1 {
-    margin-top: 0;
+  main#home {
+    justify-content: flex-start;
+    padding-top: 9vh;
   }
   h1.lg-heading {
     font-size: 5rem;
@@ -724,11 +786,48 @@ main#home h1 {
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
-    width: 52vw;
+    height: clamp(170px, 30dvh, 250px);
+    width: auto;
     margin: 0;
+    z-index: 1;
   }
   .projects {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+    gap: 1.25rem;
+  }
+  .projects .item {
+    width: 100%;
+  }
+  .projects .item .flip-card {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    min-height: unset;
+  }
+  .projects .item .flip-card .flip-card-inner,
+  .projects .item .flip-card .flip-card-front,
+  .projects .item .flip-card .flip-card-back {
+    width: 100%;
+    height: 100%;
+  }
+  .projects .item .flip-card .flip-card-back {
+    overflow-y: auto;
+    padding: 0.8rem;
+  }
+  .projects .item .flip-card .flip-card-back h3 {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    margin-bottom: 0.4rem;
+  }
+  .projects .item .flip-card .flip-card-back p {
+    font-size: clamp(0.8rem, 3.2vw, 0.95rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+  .projects .item .flip-card .flip-card-back .btn-dark {
+    padding: 0.45rem 0.8rem;
   }
 }
 
