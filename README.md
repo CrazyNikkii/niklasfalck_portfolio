@@ -1,16 +1,16 @@
 # Niklas Falck Portfolio
 
-This is my personal portfolio website showcasing my skills, projects, and experience as a developer. The site is designed to provide an overview of my work and technical expertise.
+This is my personal portfolio website showcasing my skills, projects, and experience as a developer. The site is fully self-built from ground up.
 
 ---
 
-## 🚧 Current Status
+## Current Status
 
 The portfolio is live and actively maintained. Future updates will include additional projects, improved UI/UX, and expanded sections detailing my work.
 
 ---
 
-## 🚀 Features
+## Features
 
 ### Current Features
 
@@ -28,7 +28,7 @@ The portfolio is live and actively maintained. Future updates will include addit
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: HTML, SCSS, JavaScript
 - **Hosting**: GitHub Pages
