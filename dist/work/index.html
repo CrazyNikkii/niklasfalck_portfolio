@@ -39,7 +39,12 @@
       <h2 class="sm-heading">Some of my projects...</h2>
       <div class="projects">
         <div class="item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div
+            class="flip-card"
+            onclick="
+              if (!event.target.closest('a')) this.classList.toggle('flipped');
+            "
+          >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="/img/projects/OSLeaders.jpg" alt="Project" />
@@ -62,7 +67,12 @@
           </div>
         </div>
         <div class="item">
-          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div
+            class="flip-card"
+            onclick="
+              if (!event.target.closest('a')) this.classList.toggle('flipped');
+            "
+          >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="/img/projects/portfolio_site.jpg" alt="Project" />
