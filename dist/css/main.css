@@ -619,18 +619,27 @@ main#home h1 {
     min-height: 100dvh;
     height: 100dvh;
     overflow: hidden;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 12vh;
+    padding-bottom: 0;
   }
   main#home h1 {
     margin-top: 0;
+  }
+  main#home .icons {
+    margin-top: 1rem;
+    z-index: 2;
   }
   .portrait-img {
     position: fixed;
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
-    width: 42vw;
+    height: clamp(180px, 28dvh, 280px);
+    width: auto;
     margin: 0;
+    z-index: 1;
   }
   ul.menu-nav,
   div.menu-branding {
@@ -710,8 +719,9 @@ main#home h1 {
     overflow-wrap: break-word;
     word-break: normal;
   }
-  main#home h1 {
-    margin-top: 0;
+  main#home {
+    justify-content: flex-start;
+    padding-top: 9vh;
   }
   h1.lg-heading {
     font-size: 5rem;
@@ -724,8 +734,10 @@ main#home h1 {
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
-    width: 52vw;
+    height: clamp(170px, 30dvh, 250px);
+    width: auto;
     margin: 0;
+    z-index: 1;
   }
   .projects {
     grid-template-columns: 1fr;
