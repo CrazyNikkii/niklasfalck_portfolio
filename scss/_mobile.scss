@@ -8,6 +8,7 @@
   main {
     padding: 0.01rem;
   }
+
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -23,6 +24,31 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+  }
+
+  body#bg-img {
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  main#home {
+    min-height: 100dvh;
+    height: 100dvh;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  main#home h1 {
+    margin-top: 0;
+  }
+
+  .portrait-img {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 42vw;
+    margin: 0;
   }
 
   ul.menu-nav,
@@ -62,11 +88,34 @@
       "job1"
       "job2"
       "job3"
+      "skills"
       "email"
       "phone"
       "address";
 
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-info .skills-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-info .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .about-info .skill-card {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .projects {
@@ -80,12 +129,51 @@
     text-align: center;
     padding: 0.01rem;
   }
+
   .about-info {
     padding: 0.01rem;
+    width: 100%;
+    max-width: 100%;
   }
+
+  .about-info .skills-section,
+  .about-info .skills-grid,
+  .about-info .skill-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-info .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-info .skill-card {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
   main#home h1 {
-    margin-top: 10vh;
+    margin-top: 0;
   }
+
+  h1.lg-heading {
+    font-size: 5rem;
+  }
+
+  h2.sm-heading {
+    font-size: 1.7rem;
+  }
+
+  .portrait-img {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 52vw;
+    margin: 0;
+  }
+
   .projects {
     grid-template-columns: 1fr;
   }

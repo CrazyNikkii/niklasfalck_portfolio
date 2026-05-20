@@ -117,6 +117,7 @@ main {
   grid-template-areas:
     "bioimage bio bio"
     "job1 job2 job3"
+    "skills skills skills"
     "email phone address";
   grid-template-columns: repeat(3, 1fr);
 
@@ -150,6 +151,41 @@ main {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+  .skills-section {
+    grid-area: skills;
+    background: lighten($primary-color, 5);
+    padding: 1rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+
+  .skills-section h3 {
+    font-size: 2.2rem;
+    color: $secondary-color;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    background: lighten($primary-color, 8);
+    padding: 1rem;
+    border-left: $secondary-color 3px solid;
+  }
+
+  .skill-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: $secondary-color;
+  }
+
+  .skill-card p {
+    margin: 0;
   }
   .meticulous,
   .curiosity,
