@@ -253,7 +253,7 @@ main#home h1 {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "email phone address";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "skills skills skills" "email phone address";
   grid-template-columns: repeat(3, 1fr);
 }
 .about-info .bio-image {
@@ -281,6 +281,36 @@ main#home h1 {
   background: rgb(80.75, 80.75, 80.75);
   padding: 0.5rem;
   border-bottom: #03fcf0 5px solid;
+}
+.about-info .skills-section {
+  grid-area: skills;
+  background: rgb(80.75, 80.75, 80.75);
+  padding: 1rem;
+  border-bottom: #03fcf0 5px solid;
+}
+.about-info .skills-section h3 {
+  font-size: 2.2rem;
+  color: #03fcf0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.about-info .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.about-info .skill-card {
+  background: rgb(88.4, 88.4, 88.4);
+  padding: 1rem;
+  border-left: #03fcf0 3px solid;
+}
+.about-info .skill-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #03fcf0;
+}
+.about-info .skill-card p {
+  margin: 0;
 }
 .about-info .meticulous,
 .about-info .curiosity,
@@ -581,6 +611,27 @@ main#home h1 {
     line-height: 1;
     margin-bottom: 1rem;
   }
+  body#bg-img {
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+  main#home {
+    min-height: 100dvh;
+    height: 100dvh;
+    overflow: hidden;
+    justify-content: center;
+  }
+  main#home h1 {
+    margin-top: 0;
+  }
+  .portrait-img {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 42vw;
+    margin: 0;
+  }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -608,8 +659,27 @@ main#home h1 {
   }
   .about-info {
     padding: 0.01rem;
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "email" "phone" "address";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "skills" "email" "phone" "address";
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-info .skills-section {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-info .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+  .about-info .skill-card {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
   .projects {
     grid-template-columns: repeat(1, 2fr);
@@ -623,9 +693,39 @@ main#home h1 {
   }
   .about-info {
     padding: 0.01rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-info .skills-section,
+  .about-info .skills-grid,
+  .about-info .skill-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-info .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .about-info .skill-card {
+    overflow-wrap: break-word;
+    word-break: normal;
   }
   main#home h1 {
-    margin-top: 10vh;
+    margin-top: 0;
+  }
+  h1.lg-heading {
+    font-size: 5rem;
+  }
+  h2.sm-heading {
+    font-size: 1.7rem;
+  }
+  .portrait-img {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 52vw;
+    margin: 0;
   }
   .projects {
     grid-template-columns: 1fr;
