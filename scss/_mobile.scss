@@ -32,6 +32,8 @@
     height: auto;
     overflow: visible;
     padding: 6rem 1rem 2rem 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   body#bg-img {
@@ -99,7 +101,7 @@
   }
 
   .about-info {
-    padding: 0.01rem;
+    padding: 0 0.75rem;
     grid-template-areas:
       "bioimage"
       "bio"
@@ -114,11 +116,41 @@
     grid-template-columns: 1fr;
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
   }
 
-  .about-info .skills-section {
+  .about-info .bio,
+  .about-info .job,
+  .about-info .skills-section,
+  .about-info .email-box,
+  .about-info .phone-box,
+  .about-info .address-box {
     width: 100%;
     max-width: 100%;
+  }
+
+  .about-info .bio {
+    font-size: 1.15rem;
+  }
+
+  .about-info .job {
+    padding: 1rem;
+  }
+
+  .about-info .job p,
+  .about-info .skills-section p {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .about-info .email-box div,
+  .about-info .phone-box div,
+  .about-info .address-box div {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .about-info .skills-grid {
@@ -200,27 +232,61 @@
     height: auto;
     overflow: visible;
     padding: 5.5rem 1rem 2rem 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .about-info {
-    padding: 0.01rem;
+    padding: 0 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .about-info .bio,
+  .about-info .job,
+  .about-info .skills-section,
+  .about-info .email-box,
+  .about-info .phone-box,
+  .about-info .address-box {
     width: 100%;
     max-width: 100%;
   }
 
-  .about-info .skills-section,
-  .about-info .skills-grid,
-  .about-info .skill-card {
-    width: 100%;
-    max-width: 100%;
+  .about-info .bio {
+    font-size: 1.05rem;
+  }
+
+  .about-info .job {
+    padding: 1rem;
+  }
+
+  .about-info .job p,
+  .about-info .skills-section p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  .about-info .email-box div,
+  .about-info .phone-box div,
+  .about-info .address-box div {
+    font-size: 1.05rem;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .about-info .skills-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .about-info .skill-card {
+    width: 100%;
+    max-width: 100%;
     overflow-wrap: break-word;
     word-break: normal;
   }
